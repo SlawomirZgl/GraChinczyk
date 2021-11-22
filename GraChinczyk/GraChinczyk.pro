@@ -7,7 +7,13 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp
+        gra.cpp \
+        kostka.cpp \
+        main.cpp \
+        pionekczerwony.cpp \
+        pionekniebieski.cpp \
+        pionekzielony.cpp \
+        pionekzolty.cpp
 
 RESOURCES += qml.qrc
 
@@ -21,3 +27,12 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+HEADERS += \
+    Pionek.h \
+    gra.h \
+    kostka.h \
+    pionekczerwony.h \
+    pionekniebieski.h \
+    pionekzielony.h \
+    pionekzolty.h
