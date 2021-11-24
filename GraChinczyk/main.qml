@@ -18,7 +18,7 @@ Window {
         id: smok
         anchors.fill: parent
         source: "SmokP.png"
-        scale: 0.5
+        //scale: 0.5
         //opacity: 0.5
     }
 
