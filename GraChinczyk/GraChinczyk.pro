@@ -29,9 +29,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    Pionek.h \
     gra.h \
     kostka.h \
+    pionek.h \
     pionekczerwony.h \
     pionekniebieski.h \
     pionekzielony.h \

@@ -1,11 +1,11 @@
 #ifndef PIONEKCZERWONY_H
 #define PIONEKCZERWONY_H
-#include "Pionek.h"
+#include "pionek.h"
 
-class pionekCzerwony: public Pionek
+class PionekCzerwony: public Pionek
 {
 public:
-    pionekCzerwony();
+    PionekCzerwony();
 };
 
 #endif // PIONEKCZERWONY_H

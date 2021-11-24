@@ -1,6 +1,6 @@
 #include "gra.h"
 
-gra::gra()
+Gra::Gra()
 {
 
 }

@@ -266,6 +266,7 @@ Makefile: ..\GraChinczyk\GraChinczyk.pro ..\..\qt\5.15.1\msvc2019_64\mkspecs\win
 		..\..\qt\5.15.1\msvc2019_64\mkspecs\features\qt_config.prf \
 		..\..\qt\5.15.1\msvc2019_64\mkspecs\win32-msvc\qmake.conf \
 		..\..\qt\5.15.1\msvc2019_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		..\..\qt\5.15.1\msvc2019_64\mkspecs\features\exclusive_builds.prf \
 		..\..\qt\5.15.1\msvc2019_64\mkspecs\common\msvc-version.conf \
 		..\..\qt\5.15.1\msvc2019_64\mkspecs\features\toolchain.prf \
@@ -297,7 +298,6 @@ Makefile: ..\GraChinczyk\GraChinczyk.pro ..\..\qt\5.15.1\msvc2019_64\mkspecs\win
 		..\..\qt\5.15.1\msvc2019_64\lib\Qt5Network.prl \
 		..\..\qt\5.15.1\msvc2019_64\lib\Qt5Core.prl \
 		..\..\qt\5.15.1\msvc2019_64\lib\qtmain.prl \
-		.qmake.stash \
 		..\..\qt\5.15.1\msvc2019_64\mkspecs\features\build_pass.prf \
 		..\GraChinczyk\qml.qrc \
 		..\..\qt\5.15.1\msvc2019_64\lib\Qt5Quickd.prl \
@@ -490,6 +490,7 @@ Makefile: ..\GraChinczyk\GraChinczyk.pro ..\..\qt\5.15.1\msvc2019_64\mkspecs\win
 ..\..\qt\5.15.1\msvc2019_64\mkspecs\features\qt_config.prf:
 ..\..\qt\5.15.1\msvc2019_64\mkspecs\win32-msvc\qmake.conf:
 ..\..\qt\5.15.1\msvc2019_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 ..\..\qt\5.15.1\msvc2019_64\mkspecs\features\exclusive_builds.prf:
 ..\..\qt\5.15.1\msvc2019_64\mkspecs\common\msvc-version.conf:
 ..\..\qt\5.15.1\msvc2019_64\mkspecs\features\toolchain.prf:
@@ -521,7 +522,6 @@ Makefile: ..\GraChinczyk\GraChinczyk.pro ..\..\qt\5.15.1\msvc2019_64\mkspecs\win
 ..\..\qt\5.15.1\msvc2019_64\lib\Qt5Network.prl:
 ..\..\qt\5.15.1\msvc2019_64\lib\Qt5Core.prl:
 ..\..\qt\5.15.1\msvc2019_64\lib\qtmain.prl:
-.qmake.stash:
 ..\..\qt\5.15.1\msvc2019_64\mkspecs\features\build_pass.prf:
 ..\GraChinczyk\qml.qrc:
 ..\..\qt\5.15.1\msvc2019_64\lib\Qt5Quickd.prl:

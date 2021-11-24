@@ -1,6 +1,6 @@
-#include "pionekzielony.h"
+#include "Pionekzielony.h"
 
-pionekZielony::pionekZielony()
+PionekZielony::PionekZielony()
 {
 
 }

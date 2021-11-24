@@ -1,7 +1,6 @@
 #ifndef PIONEK_H
 #define PIONEK_H
 
-#endif // PIONEK_H
 class Pionek
 {
     int x;
@@ -16,3 +15,4 @@ public:
 
 
 };
+#endif // PIONEK_H

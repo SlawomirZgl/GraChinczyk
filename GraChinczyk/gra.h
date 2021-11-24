@@ -2,10 +2,10 @@
 #define GRA_H
 
 
-class gra
+class Gra
 {
 public:
-    gra();
+    Gra();
 };
 
 #endif // GRA_H
