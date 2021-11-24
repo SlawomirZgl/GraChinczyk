@@ -1,4 +1,4 @@
-#include "Pionekzolty.h"
+#include "pionekzolty.h"
 
 PionekZolty::PionekZolty()
 {

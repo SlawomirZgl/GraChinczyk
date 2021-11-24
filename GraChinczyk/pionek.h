@@ -3,14 +3,16 @@
 
 class Pionek
 {
-    int x;
-    int y;
+    int index;
     bool wGrze;
+    int indexStart;
+    int indexStop;
 public:
      virtual void ruch(int liczba)=0;
-    int dajX(){return  x;}
-    int dajY(){return  y;}
+    int dajIndex(){return  index;}
+
     bool czyWGrze(){return wGrze;}
+    void wyrzuc();
 
 
 

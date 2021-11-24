@@ -1,7 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-
-
+#include "kostka.h"
+#include "QDebug"
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -18,6 +18,10 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
+    Kostka kostka;
+    for(int i=0; i<20;i++)
+    qDebug()<<kostka.rzut();
+
 
     return app.exec();
 }

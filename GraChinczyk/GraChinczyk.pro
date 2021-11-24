@@ -13,7 +13,8 @@ SOURCES += \
         pionekczerwony.cpp \
         pionekniebieski.cpp \
         pionekzielony.cpp \
-        pionekzolty.cpp
+        pionekzolty.cpp \
+        pole.cpp
 
 RESOURCES += qml.qrc
 
@@ -35,4 +36,5 @@ HEADERS += \
     pionekczerwony.h \
     pionekniebieski.h \
     pionekzielony.h \
-    pionekzolty.h
+    pionekzolty.h \
+    pole.h
