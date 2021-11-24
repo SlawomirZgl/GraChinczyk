@@ -18,9 +18,6 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
-    Kostka kostka;
-    for(int i=0; i<20;i++)
-    qDebug()<<kostka.rzut();
 
 
     return app.exec();

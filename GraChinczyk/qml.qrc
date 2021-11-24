@@ -1,5 +1,10 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>Pole.qml</file>
+        <file>Background.qml</file>
+        <file>Smok.png</file>
+        <file>SmokP.png</file>
+        <file>smokXD.png</file>
     </qresource>
 </RCC>

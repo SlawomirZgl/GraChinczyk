@@ -38,3 +38,5 @@ HEADERS += \
     pionekzielony.h \
     pionekzolty.h \
     pole.h
+
+DISTFILES +=
