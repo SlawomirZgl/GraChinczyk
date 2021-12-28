@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 
+import "GenerowaniePlanszy.js" as Generuj
 
 Window {
     id: root
@@ -13,6 +14,13 @@ Window {
         rotation: 290
         scale: 1.5
     }
+    Rectangle{
+        id: background
+        anchors.fill: parent
+        color: "transparent"
+
+    }
+
     Image {
         id: smok
         anchors.fill: parent
@@ -21,25 +29,25 @@ Window {
         //opacity: 0.5
     }
 
-    Pole {
+    PoleStartowe {
         id: startCzerwone
         x: 50
         y: 50
         color: "#ff4d4d"
     }
-    Pole {
+    PoleStartowe {
         id: startZolte
         x: root.width - 150
         y: root.height - 150
         color: "#ffdd45"
     }
-    Pole {
+    PoleStartowe {
         id: startZielone
         x: root.width - 150
         y: 50
         color: "#73ff70"
     }
-    Pole {
+    PoleStartowe {
         id: startNiebieskie
         x: 50
         y: root.height - 150
@@ -85,6 +93,12 @@ Window {
             GradientStop { position: 0.0; color: "#5d5e00" }
             GradientStop { position: 0.8; color: "#fbff00" }
         }
+    }
+
+    Button {
+        anchors { left: parent.left; verticalCenter: parent.verticalCenter }
+        text: "New Game"
+        onClicked: Generuj.startNewGame()
     }
 
 

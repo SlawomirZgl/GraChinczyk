@@ -2,8 +2,11 @@
 #define POLE_H
 #include "pionek.h"
 
+#include <QAbstractListModel>
+
 class Pole
 {
+
     Pionek* m_pionek;
 
 public:
