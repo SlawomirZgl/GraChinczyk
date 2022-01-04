@@ -20,4 +20,9 @@ Rectangle {
         border.width: 2
         radius: width * 0.5
     }
+
+    MouseArea{
+        anchors.fill: parent
+        onClicked: console.log("bbbb")
+    }
 }
