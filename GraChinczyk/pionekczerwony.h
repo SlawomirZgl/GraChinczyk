@@ -6,6 +6,8 @@ class PionekCzerwony: public Pionek
 {
 public:
     PionekCzerwony();
+    void ruch(int liczba);
+    void doBoxu(int ruch);
 };
 
 #endif // PIONEKCZERWONY_H
