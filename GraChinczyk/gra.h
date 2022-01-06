@@ -2,7 +2,7 @@
 #define GRA_H
 #include "QList"
 #include "pole.h"
-
+#include <QQuickView>
 #include <QQmlApplicationEngine>
 
 class Gra
@@ -17,7 +17,7 @@ class Gra
     void stworzPole();
 public:
     Gra();
-    void generujPlansze(QQmlApplicationEngine &engine);
+    void generujPlansze(QQuickView  &view);
 
 };
 

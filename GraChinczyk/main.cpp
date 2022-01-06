@@ -16,23 +16,24 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-    QQmlApplicationEngine engine;
+    //QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
 
-    QQmlContext* context = engine.rootContext();
-    Kostka k;
+   // QQmlContext* context = engine.rootContext();
+   // Kostka k;
 
-    context->setContextProperty("m_kostka", &k);  
-
+   // context->setContextProperty("m_kostka", &k);
+    QQuickView view;
     Gra g;
-    g.generujPlansze(engine);
-
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
+    //g.generujPlansze(engine);
+    g.generujPlansze(view);
+    view.show();
+    /*QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
+    }, Qt::QueuedConnection);*/
+   // engine.load(url);
 
-    engine.load(url);
     return app.exec();
 }
