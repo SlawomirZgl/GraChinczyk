@@ -9,7 +9,7 @@ Window {
     height: 900
     visible: true
     title: qsTr("Gra chinczyk")
-    Component.onCompleted: Generuj.startNewGame()
+   // Component.onCompleted:  //Generuj.startNewGame()
     Background{
         rotation: 290
         scale: 1.5
@@ -19,14 +19,6 @@ Window {
         id: background
         anchors.fill: parent
         color: "transparent"
-    }
-
-    Image {
-        id: smok
-        anchors.fill: parent
-        source: "SmokP.png"
-        scale: 0.5
-        //opacity: 0.5
     }
 
 
@@ -142,6 +134,14 @@ Window {
         text: "Rzuc kostka"
         onClicked: m_kostka.rzut()
         color: "#FF2313"
+    }
+
+    Image {
+        id: smok
+        anchors.fill: parent
+        source: "SmokP.png"
+        scale: 0.5
+        opacity: 0.7
     }
 
 }

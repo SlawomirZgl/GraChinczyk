@@ -5,7 +5,6 @@ Rectangle {
     height: 50
     color: "white"
     border.width: 1
-
     MouseArea{
         anchors.fill: parent
         onClicked: console.log("aaaa")

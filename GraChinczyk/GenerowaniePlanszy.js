@@ -1,11 +1,3 @@
-/*
- *TO DO
- *ZMIENIEC GENEROWANIE
- *ILOSC POL JEST STALA A NIE OBLICZANA
- *KSZTALT PLANSZY (algorytm generowania w petli)
- *SPRAWDZIC CZY JEST POTRZEBNE: (if (component.status == Component.Ready))
- *USUNAC ZBEDNE KOMENTARZE / NIEZROZUMIALY KOD
-*/
 var blockSize = 50;
 var Column = 11;
 var Row = 11;

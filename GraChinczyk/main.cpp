@@ -2,8 +2,12 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickView>
+#include <QQmlComponent>
+
+
 #include "kostka.h"
 #include "QDebug"
+#include "gra.h"
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -18,8 +22,10 @@ int main(int argc, char *argv[])
     QQmlContext* context = engine.rootContext();
     Kostka k;
 
-    context->setContextProperty("m_kostka", &k);
+    context->setContextProperty("m_kostka", &k);  
 
+    Gra g;
+    g.generujPlansze(engine);
 
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {

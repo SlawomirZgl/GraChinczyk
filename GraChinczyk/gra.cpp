@@ -1,6 +1,28 @@
 #include "gra.h"
 
-Gra::Gra()
+#include <QQmlEngine>
+#include <QUrl>
+#include <QQmlComponent>
+#include <QQmlProperty>
+#include <QQuickView>
+#include <QQuickItem>
+
+void Gra::stworzPole()
 {
+
+}
+
+Gra::Gra()
+{  
+}
+
+void Gra::generujPlansze(QQmlApplicationEngine &engine)
+{
+    QQmlComponent component(&engine, QUrl(QStringLiteral("qrc:/Pole.qml")));
+    QObject *object = component.create();
+
+    //object->setParent();
+    QQmlProperty(object, "x").write(0);
+    QQmlProperty(object, "y").write(0);
 
 }
