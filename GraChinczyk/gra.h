@@ -1,23 +1,26 @@
 #ifndef GRA_H
 #define GRA_H
-#include "QList"
 #include "pole.h"
-#include <QQuickView>
-#include <QQmlApplicationEngine>
+#include <QObject>
 
-class Gra
+class Gra : public QObject
 {
+    Q_OBJECT
 //    Pole plansza[40];
 //    Pole boxZielone[4];
 //    Pole boxZolte[4];
 //    Pole boxCzerwone[4];
 //    Pole boxNiebieskie[4];
     //pola startowe +10 pola konczace -1
-
-    void stworzPole();
+  //  void stworzPole();
+    int m_a;
 public:
     Gra();
-    void generujPlansze(QQuickView  &view);
+    Q_INVOKABLE void graj(int x, int y);
+
+signals:
+    void ruszaj();
+
 
 };
 

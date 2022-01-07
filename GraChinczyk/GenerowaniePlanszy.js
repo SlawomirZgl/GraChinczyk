@@ -38,7 +38,7 @@ function createBlock(column, row) {
     // Loading and we should wait for the component's statusChanged() signal to
     // know when the file is downloaded and ready before calling createObject().
    // if (component.status == Component.Ready) {
-        var dynamicObject = component.createObject(background);
+        var dynamicObject = component.createObject(root);
         if (dynamicObject == null) {
             console.log("error creating block");
             console.log(component.errorString());

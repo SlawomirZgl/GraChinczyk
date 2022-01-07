@@ -19,6 +19,7 @@ public:
     void setLiczba(int l);
 signals:
     void liczbaChanged();
+    void kosciZostalyRzucone();
 };
 
 #endif // KOSTKA_H

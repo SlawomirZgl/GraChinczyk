@@ -1,13 +1,13 @@
 #include <QGuiApplication>
-#include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickView>
-#include <QQmlComponent>
 
+#include "QDebug"
 
 #include "kostka.h"
-#include "QDebug"
 #include "gra.h"
+#include "Pionekzielony.h"
+
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -15,25 +15,28 @@ int main(int argc, char *argv[])
 #endif
 
     QGuiApplication app(argc, argv);
-
-    //QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-
-   // QQmlContext* context = engine.rootContext();
-   // Kostka k;
-
-   // context->setContextProperty("m_kostka", &k);
     QQuickView view;
+    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    QQmlContext* context = view.rootContext();
+
+    Kostka k;
+    context->setContextProperty("m_kostka", &k);
     Gra g;
-    //g.generujPlansze(engine);
-    g.generujPlansze(view);
+    PionekZielony p;
+
+
+    //QObject::connect(g,  &Gra::ruszaj, p, &PionekZielony::ruch);
+
+
+    context->setContextProperty("m_gra", &g);
+    context->setContextProperty("m_pionekZielony1", &p);
+
+
+    //qmlRegisterType<Gra>("GraModel", 1, 0, "Gra");
+
+    view.setResizeMode(QQuickView::SizeRootObjectToView);
+    view.setSource(url);
     view.show();
-    /*QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);*/
-   // engine.load(url);
 
     return app.exec();
 }

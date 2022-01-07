@@ -10,6 +10,7 @@ void Kostka::rzut()
 {
     int los = QRandomGenerator::global()->bounded(1, 7);
     setLiczba(los);
+    emit kosciZostalyRzucone();
 }
 
 int Kostka::liczba() const

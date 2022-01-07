@@ -23,6 +23,6 @@ Rectangle {
 
     MouseArea{
         anchors.fill: parent
-        onClicked: console.log("bbbb")
+        onClicked: m_gra.graj(base.x, base.y)
     }
 }

@@ -3,24 +3,17 @@ import QtQuick.Window 2.15
 
 import "GenerowaniePlanszy.js" as Generuj
 
-Window {
+
+
+Rectangle{
     id: root
     width: 900
     height: 900
-    visible: true
-    title: qsTr("Gra chinczyk")
-   // Component.onCompleted:  //Generuj.startNewGame()
+    Component.onCompleted: Generuj.startNewGame()
     Background{
         rotation: 290
         scale: 1.5
     }
-
-    Rectangle{
-        id: background
-        anchors.fill: parent
-        color: "transparent"
-    }
-
 
     PoleStartowe {
         id: startCzerwone
@@ -86,7 +79,7 @@ Window {
             GradientStop { position: 0.0; color: "#5d5e00" }
             GradientStop { position: 0.8; color: "#fbff00" }
         }
-    }    
+    }
 
     Baza {
         id: bazaCzerwone
@@ -143,7 +136,17 @@ Window {
         scale: 0.5
         opacity: 0.7
     }
+    Pionek {
+        id: piotrek
+        x: m_pionekZielony1.x
+        y: 325
+        z : 1
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#025400" }
+            GradientStop { position: 0.8; color: "#24d620" }
+        }
+    }
 
 }
-
 
