@@ -5,33 +5,32 @@ PionekCzerwony::PionekCzerwony():Pionek()
     indexStart=0;
     indexStop=39;
 }
-void PionekCzerwony::ruch(int liczba)
+int PionekCzerwony::x() const
 {
-
-    if(liczba==6)
-    {
-        //tu musimy ogarnac wybor czy ruch czy pionek out
-    }
-        else
-    {
-        index+=liczba;
-
-
-    }
-    if (index>=indexStop)
-    {
-       this->doBoxu(liczba);
-    }
-
+    return m_x;
 }
-void PionekCzerwony::doBoxu(int ruch)
+int PionekCzerwony::y() const
 {
-    if(index>indexStop+4)
-    {
+    return m_y;
+}
 
+void PionekCzerwony::setX(int a)
+{
+    if(a != m_x){
+        m_x = a;
+        emit xChanged();
     }
-    else
-    {
+}
+void PionekCzerwony::setY(int a)
+{
+    if(a != m_y){
+        m_y = a;
+        emit yChanged();
+    }
+}
 
-    }
+void PionekCzerwony::ruch()
+{
+   setX(m_x + 50);
+   setY(m_y + 50);
 }
