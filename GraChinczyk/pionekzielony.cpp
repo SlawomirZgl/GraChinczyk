@@ -23,6 +23,6 @@ void PionekZielony::setX(int a)
 
 void PionekZielony::ruch()
 {
-   m_x += 50;
+   setX(m_x + 50);
 }
 

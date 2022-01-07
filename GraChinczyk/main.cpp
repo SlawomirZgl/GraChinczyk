@@ -23,10 +23,10 @@ int main(int argc, char *argv[])
     context->setContextProperty("m_kostka", &k);
     Gra g;
     PionekZielony p;
-
+    p.setX(100);
 
     //QObject::connect(g,  &Gra::ruszaj, p, &PionekZielony::ruch);
-
+    QObject::connect(&g, SIGNAL(ruszaj()), &p, SLOT(ruch()));
 
     context->setContextProperty("m_gra", &g);
     context->setContextProperty("m_pionekZielony1", &p);
