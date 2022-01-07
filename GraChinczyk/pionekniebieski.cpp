@@ -5,6 +5,12 @@ PionekNiebieski::PionekNiebieski()
     indexStart=10;
     indexStop=9;
 }
+
+PionekNiebieski::PionekNiebieski(int x, int y)
+{
+    setX(x);
+    setY(y);
+}
 int PionekNiebieski::x() const
 {
     return m_x;

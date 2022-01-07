@@ -6,6 +6,12 @@ PionekZolty::PionekZolty()
     indexStop=29;
 }
 
+PionekZolty::PionekZolty(int x, int y)
+{
+    setX(x);
+    setY(y);
+}
+
 int PionekZolty::x() const
 {
     return m_x;

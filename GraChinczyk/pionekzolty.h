@@ -13,6 +13,7 @@ public:
     int m_y;
 public:
     PionekZolty();
+    PionekZolty(int x, int y);
 
     int x() const;
     void setX(int a);

@@ -12,6 +12,7 @@ class PionekNiebieski : public QObject , public Pionek
     int m_y;
 public:
     PionekNiebieski();
+    PionekNiebieski(int x, int y);
 
     int x() const;
     void setX(int a);

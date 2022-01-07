@@ -2,6 +2,7 @@ import QtQuick 2.0
 
 Rectangle {
     id: base
+    z: 1
     width: 100
     height: width
     border.width: 1
@@ -19,10 +20,5 @@ Rectangle {
         color: "transparent"
         border.width: 2
         radius: width * 0.5
-    }
-
-    MouseArea{
-        anchors.fill: parent
-        onClicked: m_gra.graj(base.x, base.y)
-    }
+    }  
 }

@@ -2,6 +2,7 @@
 #define GRA_H
 #include "pole.h"
 #include <QObject>
+#include "pionekzielony.h"
 
 class Gra : public QObject
 {
@@ -16,11 +17,12 @@ class Gra : public QObject
   //  void stworzPole();
     int m_a;
 public:
+    PionekZielony* pionkiZielone[4];
     Gra();
-    Q_INVOKABLE void graj(int x, int y);
+    Q_INVOKABLE void graj(int x, int y, int id);
 
 signals:
-    void ruszaj();
+    void ruszaj(int x);
 
 
 };

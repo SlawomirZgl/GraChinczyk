@@ -42,8 +42,8 @@ Rectangle{
 
     Pionek {
         id: pionekCzerwony1
-        x: startCzerwone.x
-        y: startCzerwone.y
+        x: m_pionekCzerwony1.x
+        y: m_pionekCzerwony1.y
         width: 50
         gradient: Gradient {
             GradientStop { position: 0.0; color: "#8f0c00" }
@@ -52,12 +52,58 @@ Rectangle{
     }
     Pionek {
         id: pionekZielony1
-        x: startZielone.x
-        y: startZielone.y
+        x: m_pionekZielony1.x
+        y: m_pionekZielony1.y
         width: 50
         gradient: Gradient {
             GradientStop { position: 0.0; color: "#025400" }
             GradientStop { position: 0.8; color: "#24d620" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekZielony1.x, pionekZielony1.y, m_pionekZielony1.id)
+        }
+    }
+    Pionek {
+        id: pionekZielony2
+        x: m_pionekZielony2.x
+        y: m_pionekZielony2.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#025400" }
+            GradientStop { position: 0.8; color: "#24d620" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekZielony2.x, pionekZielony2.y, m_pionekZielony2.id)
+        }
+    }
+    Pionek {
+        id: pionekZielony3
+        x: m_pionekZielony3.x
+        y: m_pionekZielony3.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#025400" }
+            GradientStop { position: 0.8; color: "#24d620" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekZielony3.x, pionekZielony3.y, m_pionekZielony3.id)
+        }
+    }
+    Pionek {
+        id: pionekZielony4
+        x: m_pionekZielony4.x
+        y: m_pionekZielony4.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#025400" }
+            GradientStop { position: 0.8; color: "#24d620" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekZielony4.x, pionekZielony4.y, m_pionekZielony4.id)
         }
     }
     Pionek {
@@ -135,17 +181,6 @@ Rectangle{
         source: "SmokP.png"
         scale: 0.5
         opacity: 0.7
-    }
-    Pionek {
-        id: piotrek
-        x: m_pionekZielony1.x
-        y: 325
-        z : 1
-        width: 50
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "#025400" }
-            GradientStop { position: 0.8; color: "#24d620" }
-        }
     }
 
 }

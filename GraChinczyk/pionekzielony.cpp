@@ -3,10 +3,15 @@
 PionekZielony::PionekZielony()
 {
 //    indexStart=20;
-//    indexStop=19;
+    //    indexStop=19;
 }
 
-
+PionekZielony::PionekZielony(int x, int y, int id)
+{
+    setX(x);
+    setY(y);
+    setId(id);
+}
 
 int PionekZielony::x() const
 {
@@ -32,9 +37,22 @@ void PionekZielony::setY(int a)
     }
 }
 
-void PionekZielony::ruch()
+int PionekZielony::id() const
 {
-   setX(m_x + 50);
-   setY(m_y + 50);
+    return m_id;
+}
+
+void PionekZielony::setId(int a)
+{
+    if(a != m_id){
+        m_id = a;
+        emit idChanged();
+    }
+}
+
+void PionekZielony::ruch(int x)
+{
+   setX(m_x + 50*x);
+   setY(m_y + 50*x);
 }
 

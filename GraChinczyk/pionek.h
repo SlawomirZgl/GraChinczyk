@@ -11,6 +11,8 @@ protected:
     int indexStop;
     bool wBoxie;
 
+
+
 public:
     Pionek()
     {

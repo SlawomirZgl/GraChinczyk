@@ -5,6 +5,12 @@ PionekCzerwony::PionekCzerwony():Pionek()
     indexStart=0;
     indexStop=39;
 }
+
+PionekCzerwony::PionekCzerwony(int x, int y)
+{
+    setX(x);
+    setY(y);
+}
 int PionekCzerwony::x() const
 {
     return m_x;
@@ -29,8 +35,8 @@ void PionekCzerwony::setY(int a)
     }
 }
 
-void PionekCzerwony::ruch()
+void PionekCzerwony::ruch(int x)
 {
-   setX(m_x + 50);
-   setY(m_y + 50);
+   setX(m_x + 50*x);
+   setY(m_y + 50*x);
 }
