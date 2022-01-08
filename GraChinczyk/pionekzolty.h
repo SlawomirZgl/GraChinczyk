@@ -2,28 +2,18 @@
 #define PIONEKZOLTY_H
 #include "pionek.h"
 
-class PionekZolty : public QObject, public Pionek
+class PionekZolty : public Pionek
 {
 public:
     Q_OBJECT
     Q_PROPERTY(int y READ y WRITE setY NOTIFY xChanged)
     Q_PROPERTY(int x READ x WRITE setX NOTIFY xChanged)
+    Q_PROPERTY(int id READ id WRITE setId NOTIFY idChanged)
 
-    int m_x;
-    int m_y;
 public:
     PionekZolty();
-    PionekZolty(int x, int y);
-
-    int x() const;
-    void setX(int a);
-    int y() const;
-    void setY(int a);
-public slots:
-    void ruch();
-signals:
-    void xChanged();
-    void yChanged();
+    PionekZolty(int x, int y,int id);
+    void ruch(int x);
 
 };
 

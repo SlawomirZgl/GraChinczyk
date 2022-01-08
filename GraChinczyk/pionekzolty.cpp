@@ -6,39 +6,18 @@ PionekZolty::PionekZolty()
     indexStop=29;
 }
 
-PionekZolty::PionekZolty(int x, int y)
+PionekZolty::PionekZolty(int x, int y, int id)
 {
+    indexStart=20;
+    indexStop=19;
     setX(x);
     setY(y);
+    setId(id);
 }
 
-int PionekZolty::x() const
-{
-    return m_x;
-}
-int PionekZolty::y() const
-{
-    return m_y;
-}
 
-void PionekZolty::setX(int a)
+void PionekZolty::ruch(int x)
 {
-    if(a != m_x){
-        m_x = a;
-        emit xChanged();
-    }
+   setX(m_x + 50*x);
+   setY(m_y + 50*x);
 }
-void PionekZolty::setY(int a)
-{
-    if(a != m_y){
-        m_y = a;
-        emit yChanged();
-    }
-}
-
-void PionekZolty::ruch()
-{
-   setX(m_x + 50);
-   setY(m_y + 50);
-}
-

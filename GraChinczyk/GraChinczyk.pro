@@ -10,6 +10,7 @@ SOURCES += \
         gra.cpp \
         kostka.cpp \
         main.cpp \
+        pionek.cpp \
         pionekczerwony.cpp \
         pionekniebieski.cpp \
         pionekzielony.cpp \

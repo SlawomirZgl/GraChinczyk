@@ -6,34 +6,15 @@ PionekCzerwony::PionekCzerwony():Pionek()
     indexStop=39;
 }
 
-PionekCzerwony::PionekCzerwony(int x, int y)
+PionekCzerwony::PionekCzerwony(int x, int y, int id)
 {
+    indexStart=0;
+    indexStop=39;
     setX(x);
     setY(y);
-}
-int PionekCzerwony::x() const
-{
-    return m_x;
-}
-int PionekCzerwony::y() const
-{
-    return m_y;
+    setId(id);
 }
 
-void PionekCzerwony::setX(int a)
-{
-    if(a != m_x){
-        m_x = a;
-        emit xChanged();
-    }
-}
-void PionekCzerwony::setY(int a)
-{
-    if(a != m_y){
-        m_y = a;
-        emit yChanged();
-    }
-}
 
 void PionekCzerwony::ruch(int x)
 {

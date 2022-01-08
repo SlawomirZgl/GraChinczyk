@@ -1,8 +1,12 @@
 #ifndef GRA_H
 #define GRA_H
+#include "kostka.h"
 #include "pole.h"
 #include <QObject>
 #include "pionekzielony.h"
+#include "pionekczerwony.h"
+#include "pionekniebieski.h"
+#include "pionekzolty.h"
 
 class Gra : public QObject
 {
@@ -17,7 +21,8 @@ class Gra : public QObject
   //  void stworzPole();
     int m_a;
 public:
-    PionekZielony* pionkiZielone[4];
+    Kostka k;
+    Pionek* pionkiZielone[16];
     Gra();
     Q_INVOKABLE void graj(int x, int y, int id);
 

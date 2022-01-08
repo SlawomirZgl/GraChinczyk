@@ -49,6 +49,52 @@ Rectangle{
             GradientStop { position: 0.0; color: "#8f0c00" }
             GradientStop { position: 0.8; color: "#ff3321" }
         }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekCzerwony1.x, pionekCzerwony1.y, m_pionekCzerwony1.id)
+        }
+    }
+    Pionek {
+        id: pionekCzerwony2
+        x: m_pionekCzerwony2.x
+        y: m_pionekCzerwony2.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#8f0c00" }
+            GradientStop { position: 0.8; color: "#ff3321" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekCzerwony2.x, pionekCzerwony2.y, m_pionekCzerwony2.id)
+        }
+    }
+    Pionek {
+        id: pionekCzerwony3
+        x: m_pionekCzerwony3.x
+        y: m_pionekCzerwony3.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#8f0c00" }
+            GradientStop { position: 0.8; color: "#ff3321" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekCzerwony3.x, pionekCzerwony3.y, m_pionekCzerwony3.id)
+        }
+    }
+    Pionek {
+        id: pionekCzerwony4
+        x: m_pionekCzerwony4.x
+        y: m_pionekCzerwony4.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#8f0c00" }
+            GradientStop { position: 0.8; color: "#ff3321" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekCzerwony4.x, pionekCzerwony4.y, m_pionekCzerwony4.id)
+        }
     }
     Pionek {
         id: pionekZielony1
@@ -108,22 +154,114 @@ Rectangle{
     }
     Pionek {
         id: pionekNiebieski1
-        x: startNiebieskie.x
-        y: startNiebieskie.y
+        x: m_pionekNiebieski1.x
+        y: m_pionekNiebieski1.y
         width: 50
         gradient: Gradient {
             GradientStop { position: 0.0; color: "#00025e" }
             GradientStop { position: 0.8; color: "#0062ff" }
         }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekNiebieski1.x, pionekNiebieski1.y, m_pionekNiebieski1.id)
+        }
+    }
+    Pionek {
+        id: pionekNiebieski2
+        x: m_pionekNiebieski2.x
+        y: m_pionekNiebieski2.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#00025e" }
+            GradientStop { position: 0.8; color: "#0062ff" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekNiebieski2.x, pionekNiebieski2.y, m_pionekNiebieski2.id)
+        }
+    }
+    Pionek {
+        id: pionekNiebieski3
+        x: m_pionekNiebieski3.x
+        y: m_pionekNiebieski3.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#00025e" }
+            GradientStop { position: 0.8; color: "#0062ff" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekNiebieski3.x, pionekNiebieski3.y, m_pionekNiebieski3.id)
+        }
+    }
+    Pionek {
+        id: pionekNiebieski4
+        x: m_pionekNiebieski4.x
+        y: m_pionekNiebieski4.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#00025e" }
+            GradientStop { position: 0.8; color: "#0062ff" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekNiebieski4.x, pionekNiebieski4.y, m_pionekNiebieski4.id)
+        }
     }
     Pionek {
         id: pionekZolty1
-        x: startZolte.x
-        y: startZolte.y
+        x: m_pionekZolty1.x
+        y: m_pionekZolty1.y
         width: 50
         gradient: Gradient {
             GradientStop { position: 0.0; color: "#5d5e00" }
             GradientStop { position: 0.8; color: "#fbff00" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekZolty1.x, pionekZolty1.y, m_pionekZolty1.id)
+        }
+    }
+    Pionek {
+        id: pionekZolty2
+        x: m_pionekZolty2.x
+        y: m_pionekZolty2.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#5d5e00" }
+            GradientStop { position: 0.8; color: "#fbff00" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekZolty2.x, pionekZolty2.y, m_pionekZolty2.id)
+        }
+    }
+    Pionek {
+        id: pionekZolty3
+        x: m_pionekZolty3.x
+        y: m_pionekZolty3.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#5d5e00" }
+            GradientStop { position: 0.8; color: "#fbff00" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekZolty3.x, pionekZolty3.y, m_pionekZolty3.id)
+        }
+    }
+    Pionek {
+        id: pionekZolty4
+        x: m_pionekZolty4.x
+        y: m_pionekZolty4.y
+        width: 50
+        gradient: Gradient {
+            GradientStop { position: 0.0; color: "#5d5e00" }
+            GradientStop { position: 0.8; color: "#fbff00" }
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: m_gra.graj(pionekZolty4.x, pionekZolty4.y, m_pionekZolty4.id)
         }
     }
 

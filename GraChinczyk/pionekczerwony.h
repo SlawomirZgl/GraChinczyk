@@ -2,28 +2,18 @@
 #define PIONEKCZERWONY_H
 #include "pionek.h"
 
-class PionekCzerwony: public QObject , public Pionek
+class PionekCzerwony: public Pionek
 {
     Q_OBJECT
     Q_PROPERTY(int y READ y WRITE setY NOTIFY xChanged)
     Q_PROPERTY(int x READ x WRITE setX NOTIFY xChanged)
+    Q_PROPERTY(int id READ id WRITE setId NOTIFY idChanged)
 
 
-    int m_x;
-    int m_y;
 public:
     PionekCzerwony();
-    PionekCzerwony(int x, int y);
-
-    int x() const;
-    void setX(int a);
-    int y() const;
-    void setY(int a);
-public slots:
+    PionekCzerwony(int x, int y,int id);
     void ruch(int x);
-signals:
-    void xChanged();
-    void yChanged();
 };
 
 #endif // PIONEKCZERWONY_H
