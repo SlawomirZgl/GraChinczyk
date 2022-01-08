@@ -16,8 +16,37 @@ PionekCzerwony::PionekCzerwony(int x, int y, int id)
 }
 
 
-void PionekCzerwony::ruch(int x)
-{
-   setX(m_x + 50*x);
-   setY(m_y + 50*x);
+void PionekCzerwony::ruch(int liczba)
+{ 
+    if((m_x == 50 || m_x == 100) && ( m_y == 50 || m_y == 100)){
+        //pole startowe
+        setX(175);
+        setY(375);
+    }
+    else{
+        for(int i=0; i < liczba; i++){
+            //prawy gorny
+            if(m_x == 675 && m_y == 175){
+                m_addX = 0;
+                m_addY = 50;
+            }
+            //prawy dolny
+            if(m_x == 675 && m_y == 675){
+                m_addX = -50;
+                m_addY = 0;
+            }
+            //lewy dolny
+            if(m_x==175 && m_y==675){
+                m_addX = 0;
+                m_addY = -50;
+            }
+            //lewy gorny
+            if(m_x == 175 && m_y== 175){
+                m_addX = 50;
+                m_addY = 0;
+            }
+            setX(m_x + m_addX);
+            setY(m_y + m_addY);
+        }
+    }
 }

@@ -9,6 +9,7 @@ Rectangle{
     id: root
     width: 900
     height: 900
+    z: -1
     Component.onCompleted: Generuj.startNewGame()
     Background{
         rotation: 290
@@ -40,6 +41,40 @@ Rectangle{
         color: "#70a0ff"
     }
 
+    Pole{
+        id: poleStartoweZielone
+        x: 475
+        y: 175
+        z:1
+        color: "#73ff70"
+        border.width: 2
+    }
+    Pole{
+        id: poleStartoweZolte
+        x: 675
+        y: 475
+        z:1
+        color: "#ffdd45"
+        border.width: 2
+    }
+    Pole{
+        id: poleStartoweNiebieskie
+        x: 375
+        y: 675
+        z:1
+        color: "#70a0ff"
+        border.width: 2
+    }
+    Pole{
+        id: poleStartoweCzerwone
+        x: 175
+        y: 375
+        z:1
+        color: "#ff4d4d"
+        border.width: 2
+    }
+
+
     Pionek {
         id: pionekCzerwony1
         x: m_pionekCzerwony1.x
@@ -52,7 +87,7 @@ Rectangle{
         MouseArea{
             anchors.fill: parent
             onClicked: m_gra.graj(pionekCzerwony1.x, pionekCzerwony1.y, m_pionekCzerwony1.id)
-        }
+        }       
     }
     Pionek {
         id: pionekCzerwony2
@@ -263,32 +298,31 @@ Rectangle{
             anchors.fill: parent
             onClicked: m_gra.graj(pionekZolty4.x, pionekZolty4.y, m_pionekZolty4.id)
         }
-    }
+    }   
 
     Baza {
-        id: bazaCzerwone
+        id: bazaZielone
         x: 425
         y: 225
-        color: "#ff4d4d"
+        color: "#73ff70"
     }
     Baza {
-        id: bazaZolte
+        id: bazaNiebieskie
         x: 425
         y: 475
-        color: "#ffdd45"
-    }
-
-    BazaPozioma {
-        id: bazaNiebieskie
-        x: 225
-        y: 425
         color: "#70a0ff"
     }
     BazaPozioma {
-        id: bazaZielone
+        id: bazaCzerwone
+        x: 225
+        y: 425
+        color: "#ff4d4d"
+    }
+    BazaPozioma {
+        id: bazaZolte
         x: 475
         y: 425
-        color: "#73ff70"
+        color: "#ffdd45"
     }
 
 
@@ -305,6 +339,7 @@ Rectangle{
             font.pointSize: 30
         }
     }
+
     Button {
         x: kostka.x - 30
         y: kostka.y + 75

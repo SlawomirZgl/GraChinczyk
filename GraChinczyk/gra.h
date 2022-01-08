@@ -12,6 +12,11 @@ class Gra : public QObject
 {
     Q_OBJECT
     Pole plansza[40];
+    /*{x,y}
+    *poziom - >{175,175}{225,175}{275,175}{325,175}{375,175}{425,175}{475,175}{525,175}{575,175}{625,175}{675,175}
+    *
+    *pion - >  {675,175}{675,175}
+    */
     Pole boxZielone[4];
     Pole boxZolte[4];
     Pole boxCzerwone[4];
@@ -22,7 +27,7 @@ class Gra : public QObject
     int m_a;
 public:
     Kostka k;
-    Pionek* pionkiZielone[16];
+    Pionek* pionki[16];
     Gra();
     Q_INVOKABLE void graj(int x, int y, int id);
 

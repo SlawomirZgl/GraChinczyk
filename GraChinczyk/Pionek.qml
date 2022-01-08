@@ -21,4 +21,6 @@ Rectangle {
         border.width: 2
         radius: width * 0.5
     }  
+    Behavior on x { NumberAnimation { duration: 400; easing.type: Easing.OutBack } }
+    Behavior on y { NumberAnimation { duration: 400; easing.type: Easing.OutBack } }
 }
