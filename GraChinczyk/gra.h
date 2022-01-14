@@ -30,7 +30,7 @@ public:
     static Pionek* pionki[16];
     Gra();
     Q_INVOKABLE static void graj(int x, int y, int id);
-    static int CzyZajete(int x, int y);
+    static int CzyZajete(int x, int y, int id);
     static void Wyrzuc(int id);
 
 signals:

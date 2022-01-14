@@ -49,7 +49,7 @@ void PionekCzerwony::ruch(int liczba)
             setX(m_x + m_addX);
             setY(m_y + m_addY);
         }
-        int id=Gra::CzyZajete(m_x,m_y);
+        int id=Gra::CzyZajete(m_x,m_y,m_id);
         qDebug()<<id;
         if(id<4 && id>7)
         {

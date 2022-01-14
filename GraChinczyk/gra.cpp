@@ -29,11 +29,11 @@ void Gra::graj(int x, int y, int id)
     pionki[id]->ruch(k.liczba());
 }
 
-int Gra::CzyZajete(int x, int y)
+int Gra::CzyZajete(int x, int y,int id)
 {
     for(int i =0; i<16;i++)
     {
-        if(x==Gra::pionki[i]->x() && y==Gra::pionki[i]->y() )
+        if(x==Gra::pionki[i]->x() && y==Gra::pionki[i]->y() && i!=id )
             return Gra::pionki[i]->id();
     }
     return -1;
