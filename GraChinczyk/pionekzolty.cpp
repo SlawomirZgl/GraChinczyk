@@ -8,8 +8,8 @@ PionekZolty::PionekZolty()
 
 PionekZolty::PionekZolty(int x, int y, int id)
 {
-    indexStart=20;
-    indexStop=19;
+    indexStart=x;
+    indexStop=y;
     setX(x);
     setY(y);
     setId(id);
@@ -22,6 +22,13 @@ void PionekZolty::ruch(int liczba)
         //pole startowe
         setX(675);
         setY(475);
+        int id=Gra::CzyZajete(m_x,m_y,m_id);
+        qDebug()<<id;
+        if((id<8 || id>11) && id!=-1)
+        {
+            qDebug()<<"wyrzucam nie ";
+            Gra::Wyrzuc(id);
+        }
     }
     else{
         for(int i=0; i < liczba; i++){
@@ -50,8 +57,9 @@ void PionekZolty::ruch(int liczba)
         }
         int id=Gra::CzyZajete(m_x,m_y,m_id);
         qDebug()<<id;
-        if(id<12)
+        if(id<12 && id!=-1)
         {
+            qDebug()<<"wyrzucam zol ";
             Gra::Wyrzuc(id);
         }
     }

@@ -8,8 +8,8 @@ PionekCzerwony::PionekCzerwony():Pionek()
 
 PionekCzerwony::PionekCzerwony(int x, int y, int id)
 {
-    indexStart=0;
-    indexStop=39;
+    indexStart=x;
+    indexStop=y;
     setX(x);
     setY(y);
     setId(id);
@@ -22,6 +22,13 @@ void PionekCzerwony::ruch(int liczba)
         //pole startowe
         setX(175);
         setY(375);
+        int id=Gra::CzyZajete(m_x,m_y,m_id);
+        qDebug()<<id;
+        if((id<8 || id>11) && id!=-1)
+        {
+            qDebug()<<"wyrzucam nie ";
+            Gra::Wyrzuc(id);
+        }
     }
     else{
         for(int i=0; i < liczba; i++){
@@ -51,8 +58,9 @@ void PionekCzerwony::ruch(int liczba)
         }
         int id=Gra::CzyZajete(m_x,m_y,m_id);
         qDebug()<<id;
-        if(id<4 && id>7)
+        if((id<4 || id>7) && id!=-1)
         {
+            qDebug()<<"wyrzucam cz ";
             Gra::Wyrzuc(id);
         }
     }

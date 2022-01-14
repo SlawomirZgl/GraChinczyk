@@ -8,8 +8,8 @@ PionekNiebieski::PionekNiebieski()
 
 PionekNiebieski::PionekNiebieski(int x, int y, int id)
 {
-    indexStart=10;
-    indexStop=9;
+    indexStart=x;
+    indexStop=y;
     setX(x);
     setY(y);
     setId(id);
@@ -22,6 +22,13 @@ void PionekNiebieski::ruch(int liczba)
         //pole startowe
         setX(375);
         setY(675);
+        int id=Gra::CzyZajete(m_x,m_y,m_id);
+        qDebug()<<id;
+        if((id<8 || id>11) && id!=-1)
+        {
+            qDebug()<<"wyrzucam nie ";
+            Gra::Wyrzuc(id);
+        }
     }
     else{
         for(int i=0; i < liczba; i++){
@@ -50,8 +57,9 @@ void PionekNiebieski::ruch(int liczba)
         }
         int id=Gra::CzyZajete(m_x,m_y,m_id);
         qDebug()<<id;
-        if(id<8 && id>11)
+        if((id<8 || id>11) && id!=-1)
         {
+            qDebug()<<"wyrzucam nie ";
             Gra::Wyrzuc(id);
         }
     }

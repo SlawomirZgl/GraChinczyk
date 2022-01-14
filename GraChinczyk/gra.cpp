@@ -41,5 +41,7 @@ int Gra::CzyZajete(int x, int y,int id)
 
 void Gra::Wyrzuc(int id)
 {
+  pionki[id]->setX(pionki[id]->indexStart);
+  pionki[id]->setY(pionki[id]->indexStop);
 
 }

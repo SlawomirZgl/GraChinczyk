@@ -8,8 +8,7 @@ class Pionek : public QObject
 protected:
     int index;
     bool wGrze;
-    int indexStart;
-    int indexStop;
+
     bool wBoxie;
     int m_x;
     int m_y;
@@ -17,6 +16,8 @@ protected:
 
 
 public:
+    int indexStart;
+    int indexStop;
     Pionek()
     {
         wBoxie=false;
