@@ -1,7 +1,7 @@
 #ifndef PIONEKCZERWONY_H
 #define PIONEKCZERWONY_H
 #include "pionek.h"
-
+#include "gra.h"
 class PionekCzerwony: public Pionek
 {
     Q_OBJECT

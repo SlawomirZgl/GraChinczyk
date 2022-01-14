@@ -26,5 +26,20 @@ Gra::Gra()
 
 void Gra::graj(int x, int y, int id)
 {
-  pionki[id]->ruch(k.liczba());
+    pionki[id]->ruch(k.liczba());
+}
+
+int Gra::CzyZajete(int x, int y)
+{
+    for(int i =0; i<16;i++)
+    {
+        if(x==Gra::pionki[i]->x() && y==Gra::pionki[i]->y() )
+            return Gra::pionki[i]->id();
+    }
+    return -1;
+}
+
+void Gra::Wyrzuc(int id)
+{
+
 }

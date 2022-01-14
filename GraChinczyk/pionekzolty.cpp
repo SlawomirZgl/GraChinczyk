@@ -1,5 +1,5 @@
 #include "pionekzolty.h"
-
+#include "gra.h"
 PionekZolty::PionekZolty()
 {
     indexStart=30;
@@ -47,6 +47,12 @@ void PionekZolty::ruch(int liczba)
             }
             setX(m_x + m_addX);
             setY(m_y + m_addY);
+        }
+        int id=Gra::CzyZajete(m_x,m_y);
+        qDebug()<<id;
+        if(id<12)
+        {
+            Gra::Wyrzuc(id);
         }
     }
 }

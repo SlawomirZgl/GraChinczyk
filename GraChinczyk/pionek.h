@@ -1,7 +1,7 @@
 #ifndef PIONEK_H
 #define PIONEK_H
 #include <QObject>
-
+#include <QDebug>
 class Pionek : public QObject
 {
     Q_OBJECT

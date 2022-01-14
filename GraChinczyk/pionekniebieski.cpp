@@ -1,5 +1,5 @@
 #include "pionekniebieski.h"
-
+#include "gra.h"
 PionekNiebieski::PionekNiebieski()
 {
     indexStart=10;
@@ -47,6 +47,12 @@ void PionekNiebieski::ruch(int liczba)
             }
             setX(m_x + m_addX);
             setY(m_y + m_addY);
+        }
+        int id=Gra::CzyZajete(m_x,m_y);
+        qDebug()<<id;
+        if(id<8 && id>11)
+        {
+            Gra::Wyrzuc(id);
         }
     }
 }
