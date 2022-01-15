@@ -54,6 +54,15 @@ void PionekZielony::ruch(int liczba)
                m_addX = 50;
                m_addY = 0;
            }
+           //wejscie do bazy
+           if(m_x == 425 && m_y== 175){
+               m_addX = 0;
+               m_addY = 50;
+           }
+           if(m_x == 425 && m_y== 375){
+               m_addX = 0;
+               m_addY = 0;
+           }
            setX(m_x + m_addX);
            setY(m_y + m_addY);
        }

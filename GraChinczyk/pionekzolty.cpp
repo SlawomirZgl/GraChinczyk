@@ -54,9 +54,19 @@ void PionekZolty::ruch(int liczba)
                 m_addX = 50;
                 m_addY = 0;
             }
+            //wejscie do bazy
+            if(m_x == 675 && m_y== 425){
+                m_addX = -50;
+                m_addY = 0;
+            }
+            if(m_x == 475 && m_y== 425){
+                m_addX = 0;
+                m_addY = 0;
+            }
             setX(m_x + m_addX);
             setY(m_y + m_addY);
         }
+
         int id=Gra::CzyZajete(m_x,m_y,m_id);
         qDebug()<<id;
         if(id<12 && id!=-1)

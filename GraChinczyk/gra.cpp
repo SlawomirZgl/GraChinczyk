@@ -1,4 +1,4 @@
-#include "gra.h"
+ #include "gra.h"
 #include <QString>
 #include <QDebug>
 #include <qDebug>
@@ -24,7 +24,7 @@ Gra::Gra()
 
 }
 
-void Gra::graj(int x, int y, int id)
+void Gra::graj(int id)
 {
     pionki[id]->ruch(k.liczba());
 }

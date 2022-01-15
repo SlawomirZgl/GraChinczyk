@@ -86,7 +86,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekCzerwony1.x, pionekCzerwony1.y, m_pionekCzerwony1.id)
+            onClicked: m_gra.graj(m_pionekCzerwony1.id)
         }       
     }
     Pionek {
@@ -100,7 +100,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekCzerwony2.x, pionekCzerwony2.y, m_pionekCzerwony2.id)
+            onClicked: m_gra.graj(m_pionekCzerwony2.id)
         }
     }
     Pionek {
@@ -114,7 +114,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekCzerwony3.x, pionekCzerwony3.y, m_pionekCzerwony3.id)
+            onClicked: m_gra.graj(m_pionekCzerwony3.id)
         }
     }
     Pionek {
@@ -128,7 +128,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekCzerwony4.x, pionekCzerwony4.y, m_pionekCzerwony4.id)
+            onClicked: m_gra.graj(m_pionekCzerwony4.id)
         }
     }
     Pionek {
@@ -142,7 +142,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekZielony1.x, pionekZielony1.y, m_pionekZielony1.id)
+            onClicked: m_gra.graj(m_pionekZielony1.id)
         }
     }
     Pionek {
@@ -156,7 +156,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekZielony2.x, pionekZielony2.y, m_pionekZielony2.id)
+            onClicked: m_gra.graj(m_pionekZielony2.id)
         }
     }
     Pionek {
@@ -170,7 +170,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekZielony3.x, pionekZielony3.y, m_pionekZielony3.id)
+            onClicked: m_gra.graj(m_pionekZielony3.id)
         }
     }
     Pionek {
@@ -184,7 +184,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekZielony4.x, pionekZielony4.y, m_pionekZielony4.id)
+            onClicked: m_gra.graj(m_pionekZielony4.id)
         }
     }
     Pionek {
@@ -198,7 +198,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekNiebieski1.x, pionekNiebieski1.y, m_pionekNiebieski1.id)
+            onClicked: m_gra.graj(m_pionekNiebieski1.id)
         }
     }
     Pionek {
@@ -212,7 +212,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekNiebieski2.x, pionekNiebieski2.y, m_pionekNiebieski2.id)
+            onClicked: m_gra.graj(m_pionekNiebieski2.id)
         }
     }
     Pionek {
@@ -226,7 +226,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekNiebieski3.x, pionekNiebieski3.y, m_pionekNiebieski3.id)
+            onClicked: m_gra.graj(m_pionekNiebieski3.id)
         }
     }
     Pionek {
@@ -240,7 +240,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekNiebieski4.x, pionekNiebieski4.y, m_pionekNiebieski4.id)
+            onClicked: m_gra.graj(m_pionekNiebieski4.id)
         }
     }
     Pionek {
@@ -254,7 +254,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekZolty1.x, pionekZolty1.y, m_pionekZolty1.id)
+            onClicked: m_gra.graj(m_pionekZolty1.id)
         }
     }
     Pionek {
@@ -268,7 +268,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekZolty2.x, pionekZolty2.y, m_pionekZolty2.id)
+            onClicked: m_gra.graj(m_pionekZolty2.id)
         }
     }
     Pionek {
@@ -282,7 +282,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekZolty3.x, pionekZolty3.y, m_pionekZolty3.id)
+            onClicked: m_gra.graj(m_pionekZolty3.id)
         }
     }
     Pionek {
@@ -296,7 +296,7 @@ Rectangle{
         }
         MouseArea{
             anchors.fill: parent
-            onClicked: m_gra.graj(pionekZolty4.x, pionekZolty4.y, m_pionekZolty4.id)
+            onClicked: m_gra.graj(m_pionekZolty4.id)
         }
     }   
 
