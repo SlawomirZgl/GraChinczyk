@@ -26,7 +26,7 @@ void PionekCzerwony::ruch(int liczba)
         m_addY = -50;
         int id=Gra::CzyZajete(m_x,m_y,m_id);
         qDebug()<<id;
-        if((id<8 || id>11) && id!=-1)
+        if((id<4 || id>7) && id!=-1)
         {
             qDebug()<<"wyrzucam cze ";
             Gra::Wyrzuc(id);
