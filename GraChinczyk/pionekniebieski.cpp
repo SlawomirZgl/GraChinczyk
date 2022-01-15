@@ -22,6 +22,8 @@ void PionekNiebieski::ruch(int liczba)
         //pole startowe
         setX(375);
         setY(675);
+        m_addX = -50;
+        m_addY = 0;
         int id=Gra::CzyZajete(m_x,m_y,m_id);
         qDebug()<<id;
         if((id<8 || id>11) && id!=-1)

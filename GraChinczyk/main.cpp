@@ -6,7 +6,7 @@
 
 #include "kostka.h"
 #include "gra.h"
-#include "Pionekzielony.h"
+#include "pionekzielony.h"
 #include "pionekczerwony.h"
 #include "pionekniebieski.h"
 #include "pionekzolty.h"
@@ -23,18 +23,10 @@ int main(int argc, char *argv[])
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QQmlContext* context = view.rootContext();
 
-
-
     Gra g;
 
     context->setContextProperty("m_kostka", &g.k);
-
-    //QObject::connect(g,  &Gra::ruszaj, p, &PionekZielony::ruch);
-    //QObject::connect(&g, SIGNAL(ruszaj(int)), &g.pionki[0], SLOT(ruch(int)));
-
-
     context->setContextProperty("m_gra", &g);
-
 
     context->setContextProperty("m_pionekZielony1", g.pionki[0]);
     context->setContextProperty("m_pionekZielony2", g.pionki[1]);
@@ -52,9 +44,6 @@ int main(int argc, char *argv[])
     context->setContextProperty("m_pionekZolty2", g.pionki[13]);
     context->setContextProperty("m_pionekZolty3", g.pionki[14]);
     context->setContextProperty("m_pionekZolty4", g.pionki[15]);
-
-
-    //qmlRegisterType<Gra>("GraModel", 1, 0, "Gra");
 
     view.setResizeMode(QQuickView::SizeRootObjectToView);
     view.setSource(url);

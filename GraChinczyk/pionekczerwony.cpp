@@ -22,11 +22,13 @@ void PionekCzerwony::ruch(int liczba)
         //pole startowe
         setX(175);
         setY(375);
+        m_addX = 0;
+        m_addY = -50;
         int id=Gra::CzyZajete(m_x,m_y,m_id);
         qDebug()<<id;
         if((id<8 || id>11) && id!=-1)
         {
-            qDebug()<<"wyrzucam nie ";
+            qDebug()<<"wyrzucam cze ";
             Gra::Wyrzuc(id);
         }
     }
