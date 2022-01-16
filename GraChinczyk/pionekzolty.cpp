@@ -18,6 +18,8 @@ PionekZolty::PionekZolty(int x, int y, int id)
 
 void PionekZolty::ruch(int liczba)
 {
+    if(Gra::GetTura()%4==3)
+    {
     if((m_x == 750 || m_x == 800) && ( m_y == 750 || m_y == 800)){
         //pole startowe
         setX(675);
@@ -31,6 +33,7 @@ void PionekZolty::ruch(int liczba)
             qDebug()<<"wyrzucam zol ";
             Gra::Wyrzuc(id);
         }
+        Gra::NastepnyGracz();
     }
     else{
         for(int i=0; i < liczba; i++){
@@ -74,5 +77,8 @@ void PionekZolty::ruch(int liczba)
             qDebug()<<"wyrzucam zol ";
             Gra::Wyrzuc(id);
         }
+        if(liczba !=6)
+            Gra::NastepnyGracz();
+    }
     }
 }

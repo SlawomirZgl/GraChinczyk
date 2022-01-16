@@ -3,6 +3,16 @@
 #include <QDebug>
 #include <qDebug>
 
+int Gra::GetTura()
+{
+    return tura;
+}
+
+void Gra::NastepnyGracz()
+{
+    tura++;
+}
+
 Gra::Gra()
 {
     pionki[0] = new PionekZielony(750,50, 0);

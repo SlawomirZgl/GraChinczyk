@@ -18,6 +18,8 @@ PionekCzerwony::PionekCzerwony(int x, int y, int id)
 
 void PionekCzerwony::ruch(int liczba)
 { 
+    if(Gra::GetTura()%4==1)
+    {
     if((m_x == 50 || m_x == 100) && ( m_y == 50 || m_y == 100)){
         //pole startowe
         setX(175);
@@ -31,6 +33,7 @@ void PionekCzerwony::ruch(int liczba)
             qDebug()<<"wyrzucam cze ";
             Gra::Wyrzuc(id);
         }
+        Gra::NastepnyGracz();
     }
     else{
         for(int i=0; i < liczba; i++){
@@ -74,5 +77,8 @@ void PionekCzerwony::ruch(int liczba)
             qDebug()<<"wyrzucam cz ";
             Gra::Wyrzuc(id);
         }
+        if(liczba != 6)
+            Gra::NastepnyGracz();
+    }
     }
 }

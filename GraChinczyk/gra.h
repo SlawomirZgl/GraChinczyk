@@ -21,11 +21,14 @@ class Gra : public QObject
     Pole boxZolte[4];
     Pole boxCzerwone[4];
     Pole boxNiebieskie[4];
+    static int tura;
 
     //pola startowe +10 pola konczace -1
   //  void stworzPole();
     int m_a;
 public:
+    static int GetTura();
+    static void NastepnyGracz();
     static Kostka k;
     static Pionek* pionki[16];
     Gra();

@@ -12,6 +12,7 @@
 #include "pionekzolty.h"
 Pionek* Gra::pionki[16];
 Kostka Gra::k;
+int Gra::tura=1;
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)

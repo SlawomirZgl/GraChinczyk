@@ -18,6 +18,8 @@ PionekZielony::PionekZielony(int x, int y, int id)
 
 void PionekZielony::ruch(int liczba)
 {
+   if(Gra::GetTura()%4==2)
+   {
    if((m_x == 750 || m_x == 800) && ( m_y == 50 || m_y == 100)){
        //pole startowe
        setX(475);
@@ -31,6 +33,7 @@ void PionekZielony::ruch(int liczba)
            qDebug()<<"wyrzucam zie ";
            Gra::Wyrzuc(id);
        }
+        Gra::NastepnyGracz();
    }
    else{
        for(int i=0; i < liczba; i++){
@@ -73,6 +76,9 @@ void PionekZielony::ruch(int liczba)
            qDebug()<<"wyrzucam zie ";
            Gra::Wyrzuc(id);
        }
+       if(liczba != 6)
+           Gra::NastepnyGracz();
+   }
    }
 }
 
