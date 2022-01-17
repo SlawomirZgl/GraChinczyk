@@ -18,7 +18,7 @@ PionekNiebieski::PionekNiebieski(int x, int y, int id)
 
 void PionekNiebieski::ruch(int liczba)
 {
-    if(Gra::GetTura()%4==0)
+    if(Gra::getTura()==0)
     {
     if((m_x == 50 || m_x == 100) && ( m_y == 750 || m_y == 800)){
         //pole startowe

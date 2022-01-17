@@ -18,7 +18,7 @@ PionekCzerwony::PionekCzerwony(int x, int y, int id)
 
 void PionekCzerwony::ruch(int liczba)
 { 
-    if(Gra::GetTura()%4==1)
+    if(Gra::getTura()==1)
     {
     if((m_x == 50 || m_x == 100) && ( m_y == 50 || m_y == 100)){
         //pole startowe

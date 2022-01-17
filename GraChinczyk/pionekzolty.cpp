@@ -18,7 +18,7 @@ PionekZolty::PionekZolty(int x, int y, int id)
 
 void PionekZolty::ruch(int liczba)
 {
-    if(Gra::GetTura()%4==3)
+    if(Gra::getTura()==3)
     {
     if((m_x == 750 || m_x == 800) && ( m_y == 750 || m_y == 800)){
         //pole startowe

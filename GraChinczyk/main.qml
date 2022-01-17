@@ -323,8 +323,20 @@ Rectangle{
         x: 475
         y: 425
         color: "#ffdd45"
-    }
+    } 
 
+    Rectangle {
+        id: gracz
+        x: kostka.x - 25
+        y: kostka.y -100
+        width: 100
+        height: 100
+        color: "transparent"
+        Text {
+            id: gracztxt
+            font.pointSize: 10
+        }
+    }
 
     Rectangle {
         id: kostka
@@ -344,7 +356,16 @@ Rectangle{
         x: kostka.x - 30
         y: kostka.y + 75
         text: "Rzuc kostka"
-        onClicked: m_kostka.rzut()
+        onClicked:{
+            switch(m_gra.getTura()){
+            case 0: gracztxt.text = "Teraz gra: \nNiebieski"; break;
+            case 1: gracztxt.text = "Teraz gra: \nCzerwony"; break;
+            case 2: gracztxt.text = "Teraz gra: \nZielony"; break;
+            case 3: gracztxt.text = "Teraz gra: \nZolty"; break;
+            }
+
+            m_kostka.rzut()
+        }
         color: "#FF2313"
     }
 
