@@ -9,7 +9,6 @@ int Gra::getTura()
 
 void Gra::NastepnyGracz()
 {
-    m_kostka.setLiczba(0);
     m_tura++;
 }
 

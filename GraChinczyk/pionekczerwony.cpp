@@ -77,8 +77,10 @@ void PionekCzerwony::ruch(int liczba)
             qDebug()<<"wyrzucam cz ";
             Gra::Wyrzuc(id);
         }
-        if(liczba != 6)
+        Gra::m_kostka.setLiczba(0);
+        if(liczba != 6){
             Gra::NastepnyGracz();
+        }
     }
     }
 }
