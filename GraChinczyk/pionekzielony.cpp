@@ -21,19 +21,21 @@ void PionekZielony::ruch(int liczba)
    if(Gra::getTura()==2)
    {
        if((m_x == 750 || m_x == 800) && ( m_y == 50 || m_y == 100)){
-           //pole startowe
-           setX(475);
-           setY(175);
-           m_addX = 50;
-           m_addY = 0;
-           int id=Gra::CzyZajete(m_x,m_y,m_id);
-           qDebug()<<id;
-            if(id>3 && id!=-1)
-           {
-               qDebug()<<"wyrzucam zie ";
-               Gra::Wyrzuc(id);
+           if((Gra::m_kostka.liczba() == 1 || Gra::m_kostka.liczba() == 6)){
+               //pole startowe
+               setX(475);
+               setY(175);
+               m_addX = 50;
+               m_addY = 0;
+               int id=Gra::CzyZajete(m_x,m_y,m_id);
+               qDebug()<<id;
+                if(id>3 && id!=-1)
+               {
+                   qDebug()<<"wyrzucam zie ";
+                   Gra::Wyrzuc(id);
+               }
+                Gra::NastepnyGracz();
            }
-            Gra::NastepnyGracz();
        }
        else{
            for(int i=0; i < liczba; i++){
