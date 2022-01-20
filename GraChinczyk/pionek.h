@@ -6,10 +6,7 @@ class Pionek : public QObject
 {
     Q_OBJECT
 protected:
-    int index;
-    bool wGrze;
 
-    bool wBoxie;
     int m_x;
     int m_y;
     int m_id;
@@ -20,14 +17,9 @@ public:
     int indexStop;
     Pionek()
     {
-        wBoxie=false;
-        wGrze=false;
-        index=0;
+
     }    
 
-    int dajIndex(){return  index;}
-
-    bool czyWGrze(){return wGrze;}
     void wyrzuc();
 //    virtual void doBoxu(int ruch)=0;
 //    virtual void ruchWBoxie()=0;

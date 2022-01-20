@@ -1,7 +1,6 @@
 #ifndef GRA_H
 #define GRA_H
 #include "kostka.h"
-#include "pole.h"
 #include <QObject>
 #include "pionekzielony.h"
 #include "pionekczerwony.h"
@@ -11,11 +10,6 @@
 class Gra : public QObject
 {
     Q_OBJECT
-//    Pole plansza[40];
-//    Pole boxZielone[4];
-//    Pole boxZolte[4];
-//    Pole boxCzerwone[4];
-//    Pole boxNiebieskie[4];
     static int m_tura;
 
 public:

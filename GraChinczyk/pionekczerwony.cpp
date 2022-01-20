@@ -36,6 +36,9 @@ void PionekCzerwony::ruch(int liczba)
                 }
                 Gra::NastepnyGracz();
             }
+            else
+             Gra::NastepnyGracz();
+
         }
         else{
             for(int i=0; i < liczba; i++){
