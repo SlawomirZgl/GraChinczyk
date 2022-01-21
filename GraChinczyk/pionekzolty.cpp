@@ -80,13 +80,11 @@ void PionekZolty::ruch(int liczba)
             {
                 qDebug()<<"wyrzucam zol ";
                 Gra::Wyrzuc(id);
-            }
-
-            Gra::m_kostka.setLiczba(0);
-
+            }          
             if(liczba !=6){
                 Gra::NastepnyGracz();
             }
         }
-    }
+        Gra::m_kostka.setLiczba(0);
+    }  
 }

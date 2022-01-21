@@ -80,13 +80,11 @@ void PionekZielony::ruch(int liczba)
                qDebug()<<"wyrzucam zie ";
                Gra::Wyrzuc(id);
            }
-
-           Gra::m_kostka.setLiczba(0);
-
            if(liczba != 6){
                Gra::NastepnyGracz();
            }
        }
+       Gra::m_kostka.setLiczba(0);
    }
 }
 
